@@ -28,8 +28,8 @@ export default function Home(): React.ReactElement {
 
     try {
       // Use relative path for same-origin requests or the env variable
-      const backend =
-        process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3001";
+      console.log(process.env.NEXT_PUBLIC_BACKEND_URL);
+      const backend = process.env.NEXT_PUBLIC_BACKEND_URL;
 
       const res = await fetch(`${backend}/api/check`, {
         method: "POST",
